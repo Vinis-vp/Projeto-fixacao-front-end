@@ -8,19 +8,21 @@
 </head>
 <body>
     <!-- Barra Lateral -->
-    <aside class="sidebar">
-        <nav>
+    <button class="hamburger" id="hamburger-menu">&#9776;</button>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+    <nav>
         <ul>
-            <li><a href="#"><span class="icon">🏠</span> Início</a></li>
-            <li><a href="#"><span class="icon">📄</span> Documentos</a></li>
-            <li><a href="#"><span class="icon">📊</span> Relatórios</a></li>
-            <li><a href="#"><span class="icon">⚙️</span> Configurações</a></li>
-            <li><a href="#"><span class="icon">❓</span> Ajuda</a></li>
+        <li><a href="#"><span class="icon">🏠</span> Início</a></li>
+        <li><a href="#"><span class="icon">📄</span> Documentos</a></li>
+        <li><a href="#"><span class="icon">📊</span> Relatórios</a></li>
+        <li><a href="#"><span class="icon">⚙️</span> Configurações</a></li>
+        <li><a href="#"><span class="icon">❓</span> Ajuda</a></li>
         </ul>
-        </nav>
-        <div class="sidebar-bottom">
+    </nav>
+    <div class="sidebar-bottom">
         <img src="imgs/logoSenai.png" alt="Imagem" class="imagem">
-        </div>
+    </div>
     </aside>
 
     <!-- Cabeçalho -->
@@ -239,8 +241,17 @@
                 <label for="documento">Upload de Documento PDF:</label>
                 <input type="file" id="documento" name="documento" accept="application/pdf">
                 
-                <label for="termos">Aceitar Termos:</label>
-                <input type="range" id="termos" name="termos" min="0" max="1" step="1">
+                <fieldset>
+                    <legend>Aceitar Termos:</legend>
+                    <div class="radio-group">
+                        <label class="radio-label" for="termos-sim">
+                            <input type="radio" id="termos-sim" name="termos" value="sim"> Sim
+                        </label>
+                        <label class="radio-label" for="termos-nao">
+                            <input type="radio" id="termos-nao" name="termos" value="nao"> Não
+                        </label>
+                    </div>
+                </fieldset>
                 
                 <label for="horario-contato">Horário de Preferência para Contato:</label>
                 <input type="time" id="horario-contato" name="horario-contato">
@@ -248,8 +259,11 @@
                 <label for="dependentes">Número de Dependentes:</label>
                 <input type="number" id="dependentes" name="dependentes">
                 
-                <label for="cor-favorita">Cor Favorita:</label>
-                <input type="color" id="cor-favorita" name="cor-favorita">
+                <label for="cor-favorita">
+                    Cor Favorita:
+                </label>
+                  
+                  <input type="color" id="cor-favorita" name="cor-favorita" value="#000000">
                 
                 <label for="comentarios">Comentários ou Observações:</label>
                 <textarea id="comentarios" name="comentarios"></textarea>

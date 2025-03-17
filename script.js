@@ -5,6 +5,8 @@ const cepInput = document.getElementById("cep");
 const cnpjInput = document.getElementById("cnpj");
 const cartaoInput = document.getElementById("cartao");
 const cvvInput = document.getElementById("cvv");
+const hamburger = document.getElementById('hamburger-menu');
+const sidebar = document.getElementById('sidebar');
 
 cpfInput.addEventListener("input", function (e) {
 	let cpf = e.target.value.replace(/\D/g, "");
@@ -122,5 +124,18 @@ document.addEventListener("DOMContentLoaded", function () {
 		forms.forEach(function (form) {
 			form.reset();
 		});
+	});
+});
+
+
+
+hamburger.addEventListener('click', () => {
+	sidebar.classList.toggle('active');
+	});
+
+	const sidebarLinks = sidebar.querySelectorAll('a');
+	sidebarLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			sidebar.classList.remove('active');
 	});
 });
