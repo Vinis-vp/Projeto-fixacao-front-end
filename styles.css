@@ -111,13 +111,15 @@ input[type="color"] {
 }
 
 .card {
-    background-color: #ffffff;
-    border-radius: 8px;
+	background-color: #b9d8fa;
+    border-radius: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 25px;
     color: #333;
     width: 100%;
     box-sizing: border-box;
+    max-width: 600px; 
+    margin: 0 auto;   
 }
 
 .cards-container {
@@ -125,6 +127,11 @@ input[type="color"] {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content > .card:last-of-type {
+    max-width: 600px; 
     margin: 0 auto;
 }
 
@@ -187,6 +194,7 @@ input[type="color"] {
 	border: none;
 	padding: 10px 20px;
 	cursor: pointer;
+	border-radius: 25px;
 }
 
 .btn-limpar {
@@ -195,6 +203,7 @@ input[type="color"] {
 	border: none;
 	padding: 10px 20px;
 	cursor: pointer;
+	border-radius: 25px;
 }
 
 .hamburger {
@@ -275,7 +284,8 @@ input[type="color"] {
     }
     
     .card {
-        padding: 20px;
+        padding: 15px;
+        max-width: 100%;
     }
 }
 
@@ -320,6 +330,11 @@ input[type="color"] {
 
 	.hobbies {
 		flex-direction: column;
+	}
+
+	.last-card {
+		max-width: 90%;
+		margin-bottom: 15px;
 	}
 }
 
